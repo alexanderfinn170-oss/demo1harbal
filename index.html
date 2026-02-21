@@ -27,27 +27,28 @@ body{
 /* HEADER */
 .company-header{
   text-align:center;
-  padding:60px 20px;
+  padding:30px 20px;
   background: radial-gradient(circle at top left,#ff4e50,#f9d423,#1dd1a1);
   border-radius:15px 15px 0 0;
   position:relative;
   box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
-.company-header img{
-  width:200px;
-  height:200px;
+.header-pic{
+  width:120px;
+  height:120px;
   border-radius:50%;
-  border:4px solid #fff;
   object-fit:cover;
-  transition:all 0.3s ease;
+  animation: popMove 2s ease-in-out infinite alternate;
+  margin-bottom:15px;
 }
-.company-header img:hover{
-  transform:scale(1.1) rotate(-5deg);
-  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+@keyframes popMove{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+  100%{transform:scale(1);}
 }
 .company-header h1{
-  margin:20px 0 10px;
-  font-size:42px;
+  margin:10px 0 10px;
+  font-size:38px;
   font-weight:bold;
   letter-spacing:1px;
   color:#fff;
@@ -97,21 +98,21 @@ body{
 }
 .product h3{
   margin-bottom:10px;
-  font-size:20px;
+  font-size:22px;
   font-weight:bold;
   color:#fff;
 }
 .product ul{
   list-style: none;
   padding:0;
-  font-size:14px;
+  font-size:16px;
   text-align:left;
   color:#eee;
 }
 .product ul li{
-  margin-bottom:6px;
+  margin-bottom:8px;
   position:relative;
-  padding-left:18px;
+  padding-left:22px;
 }
 .product ul li::before{
   content:'✔';
@@ -287,6 +288,17 @@ input,select{
   transform:scale(1.3) rotate(-10deg);
   box-shadow:0 10px 25px rgba(0,0,0,.5);
 }
+
+/* YOUTUBE VIDEO */
+.video-section{
+  margin:30px 0;
+}
+.video-section iframe{
+  width:100%;
+  height:315px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
 </style>
 </head>
 <body>
@@ -295,7 +307,7 @@ input,select{
 
 <!-- HEADER -->
 <div class="company-header">
-<img src="https://via.placeholder.com/220" alt="Logo">
+<img class="header-pic" src="https://via.placeholder.com/120" alt="Header Pic">
 <h1>Herbal Power Boost</h1>
 <div class="phone-banner">👉 ০১৭৫xxxxxxx</div>
 </div>
@@ -305,69 +317,72 @@ input,select{
 
 <div class="product">
 <img src="https://via.placeholder.com/250x250?text=Product+1">
-<h3>Power Capsule</h3>
+<h3>পাওয়ার ক্যাপসুল</h3>
 <ul>
-<li>100% Natural Ingredients</li>
-<li>Improves Stamina</li>
-<li>Enhances Male Strength</li>
-<li>Fast Acting Formula</li>
-<li>Safe & Effective</li>
+<li>১০০% প্রাকৃতিক উপাদান</li>
+<li>স্ট্যামিনা বাড়ায়</li>
+<li>পুরুষ শক্তি উন্নত করে</li>
+<li>দ্রুত কার্যকরী ফর্মুলা</li>
+<li>নিরাপদ ও কার্যকরী</li>
 </ul>
 <a href="#order" class="order-btn">অর্ডার করতে চাই</a>
 </div>
 
 <div class="product">
 <img src="https://via.placeholder.com/250x250?text=Product+2">
-<h3>Herbal Max</h3>
+<h3>হার্বাল ম্যাক্স</h3>
 <ul>
-<li>Boosts Energy</li>
-<li>Long-lasting Effects</li>
-<li>Premium Quality Herbs</li>
-<li>No Side Effects</li>
-<li>Doctor Recommended</li>
+<li>শক্তি বৃদ্ধি করে</li>
+<li>দীর্ঘস্থায়ী প্রভাব</li>
+<li>প্রিমিয়াম মানের হার্বস</li>
+<li>কোন পার্শ্বপ্রতিক্রিয়া নেই</li>
+<li>ডাক্তার অনুমোদিত</li>
 </ul>
 <a href="#order" class="order-btn">অর্ডার করতে চাই</a>
 </div>
 
+<!-- YOUTUBE VIDEO AFTER SECOND PRODUCT -->
+<div class="video-section">
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=0&playsinline=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+</div>
+
 <div class="product">
 <img src="https://via.placeholder.com/250x250?text=Product+3">
-<h3>Stamina Plus</h3>
+<h3>স্ট্যামিনা প্লাস</h3>
 <ul>
-<li>Increase Endurance</li>
-<li>Enhances Libido</li>
-<li>Quick Results</li>
-<li>All-Natural</li>
-<li>Highly Rated</li>
+<li>ধৈর্য্য বৃদ্ধি করে</li>
+<li>লিবিডো উন্নত করে</li>
+<li>দ্রুত ফলাফল</li>
+<li>সম্পূর্ণ প্রাকৃতিক</li>
+<li>উচ্চ রেটিং</li>
 </ul>
 <a href="#order" class="order-btn">অর্ডার করতে চাই</a>
 </div>
 
 <div class="product">
 <img src="https://via.placeholder.com/250x250?text=Product+4">
-<h3>Energy Booster</h3>
+<h3>এনার্জি বুস্টার</h3>
 <ul>
-<li>Premium Herbal Formula</li>
-<li>Fast Acting</li>
-<li>Supports Performance</li>
-<li>Safe & Tested</li>
-<li>Trusted Brand</li>
+<li>প্রিমিয়াম হার্বাল ফর্মুলা</li>
+<li>দ্রুত কার্যকরী</li>
+<li>পারফরম্যান্স সহায়ক</li>
+<li>নিরাপদ ও পরীক্ষিত</li>
+<li>বিশ্বস্ত ব্র্যান্ড</li>
 </ul>
 <a href="#order" class="order-btn">অর্ডার করতে চাই</a>
 </div>
 
 <div class="product">
 <img src="https://via.placeholder.com/250x250?text=Product+5">
-<h3>Ultimate Power Mix</h3>
+<h3>আলটিমেট পাওয়ার মিক্স</h3>
 <ul>
-<li>Boost Stamina & Strength</li>
-<li>Long Lasting Effects</li>
-<li>Natural Herbal Ingredients</li>
-<li>Doctor Approved</li>
-<li>Premium Quality</li>
+<li>স্ট্যামিনা ও শক্তি বাড়ায়</li>
+<li>দীর্ঘস্থায়ী প্রভাব</li>
+<li>প্রাকৃতিক হার্বাল উপাদান</li>
+<li>ডাক্তার অনুমোদিত</li>
+<li>প্রিমিয়াম মানের</li>
 </ul>
 <a href="#order" class="order-btn">অর্ডার করতে চাই</a>
-</div>
-
 </div>
 
 <!-- ORDER FORM -->
@@ -405,11 +420,6 @@ input,select{
 <div class="success-overlay" id="successMsg">
 ✅ ধন্যবাদ আপনার অর্ডারটি সাবমিট হয়েছে ✅<br>
 ✅ আমাদের সাপোর্ট প্রতিনিধি আপনার সাথে কিছুক্ষণ পর যোগাযোগ করবে ✅
-</div>
-
-<!-- YOUTUBE VIDEO -->
-<div class="video-section">
-<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=0&playsinline=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 </div>
 
 <!-- FOOTER -->
